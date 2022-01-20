@@ -20,8 +20,8 @@ class ViewController: UIViewController {
         customView.backgroundColor = .white
         view = customView
         
-        initButtons()
-        initContainerForSquares()
+        setupButtons()
+        setupContainerForSquares()
     }
     
     override func viewDidLoad() {
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         clearScreen()
     }
 
-    private func initButtons() {
+    private func setupButtons() {
         fillButton = UIButton()
         fillButton.setTitle("Fill", for: .normal)
         fillButton.layer.cornerRadius = buttonHeight / 4
@@ -57,7 +57,7 @@ class ViewController: UIViewController {
         view.addSubview(clearButton)
     }
     
-    private func initContainerForSquares() {
+    private func setupContainerForSquares() {
         containerForSquares = UIView()
         containerForSquares.backgroundColor = .lightGray
         view.addSubview(containerForSquares)

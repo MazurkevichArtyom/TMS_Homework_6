@@ -24,8 +24,8 @@ class ViewController: UIViewController {
         customView.backgroundColor = .white
         view = customView
 
-        initCircleView()
-        initControlButtons()
+        setupCircleView()
+        setupControlButtons()
     }
 
     override func viewDidLoad() {
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         rightButton.frame = downButton.frame.offsetBy(dx: buttonSize, dy: -buttonSize / 2 - buttonSize / 4)
     }
 
-    private func initCircleView() {
+    private func setupCircleView() {
         let diameter = min(view.bounds.height, view.bounds.width) * 0.2
         let gradientLayer = CAGradientLayer()
         
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         view.addSubview(circleView)
     }
     
-    private func initControlButtons() {
+    private func setupControlButtons() {
         downButton = createControlButton(direction: .down)
         upButton = createControlButton(direction: .up)
         leftButton = createControlButton(direction: .left)

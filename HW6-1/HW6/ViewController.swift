@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         customView.backgroundColor = .white
         view = customView
         
-        initCircleView()
+        setupCircleView()
     }
     
     override func viewDidLoad() {
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         circleView.center = randomCenterPoint(radius: circleView.layer.cornerRadius)
     }
     
-    private func initCircleView() {
+    private func setupCircleView() {
         let diameter = min(view.bounds.height, view.bounds.width) * 0.3
         let gradientLayer = CAGradientLayer()
         
